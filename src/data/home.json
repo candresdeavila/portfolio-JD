@@ -1,29 +1,29 @@
 {
-  "name": "John Doe",
-  "photoUrl": "favicon.svg",
-  "intro": "A brief, compelling introduction about who you are and what you do. Mention your core philosophy, your passion for building digital products, and your drive for creating efficient, high-impact solutions.",
-  "introHtml": "A brief, compelling introduction about who you are and what you do. Mention your core <span class='text-white font-bold'>philosophy</span>, your passion for building digital products, and your drive for creating <span class='text-white font-bold'>efficient</span>, <span class='text-white font-bold'>high-impact</span> solutions.",
-  "webpageTitle": "John Doe",
+  "name": "Jesus De Avila",
+  "photoUrl": "JDprofilep.m.webp",
+  "intro": "Creative professional with strong command of color theory, composition, and visual harmony, capable of building cohesive and engaging designs. Skilled in tools such as Photoshop, Illustrator, CorelDRAW, Animate, and embroidery software (Stitch), while also leveraging AI-powered design tools to streamline workflows and enhance creativity. Known for a sharp aesthetic sense, attention to detail, and the ability to adapt concepts across digital and print formats.",
+  "introHtml": "Creative professional with strong command of color theory, composition, and visual harmony, capable of building cohesive and engaging designs. Skilled in tools such as Photoshop, Illustrator, CorelDRAW, Animate, and embroidery software (Stitch), while also leveraging AI-powered design tools to streamline workflows and enhance creativity. Known for a sharp aesthetic sense, attention to detail, and the ability to adapt concepts across digital and print formats.",
+  "webpageTitle": "Jesus De Avila",
   "resumeUrl": "https://example-files.online-convert.com/document/pdf/example.pdf",
   "socials": [
     {
       "name": "GitHub",
-      "url": "https://github.com/[YOUR_USER_NAME]",
+      "url": "https://github.com/JD981215",
       "icon": "mdi:github"
     },
     {
       "name": "LinkedIn",
-      "url": "https://linkedin.com/in/[YOUR_USER_NAME]",
+      "url": "https://www.linkedin.com/in/ryden-jd/",
       "icon": "mdi:linkedin"
     },
     {
       "name": "Email",
-      "url": "mailto:your-mail@example.com",
+      "url": "mailto:rydenjesusd@gmail.com",
       "icon": "mdi:email"
     },
     {
       "name": "Whatsapp",
-      "url": "https://wa.me/[YOUR_WHATSAPP_NUMBER]",
+      "url": "https://wa.me/+573128331578",
       "icon": "mdi:whatsapp"
     }
   ]

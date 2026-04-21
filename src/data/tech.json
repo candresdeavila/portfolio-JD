@@ -1,35 +1,63 @@
 {
   "categories": [
     {
-      "title": "Mobile Development",
+      "title": "Design Software",
       "skills": [
-        { "name": "Flutter", "level": 3, "icon": "skill-icons:flutter-dark" },
-        { "name": "Dart", "level": 3, "icon": "skill-icons:dart-dark" },
-        { "name": "Kotlin", "level": 1, "icon": "skill-icons:kotlin-dark" }
+        {
+          "name": "Adobe Photoshop",
+          "level": 3,
+          "icon": "skill-icons:photoshop"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "level": 3,
+          "icon": "skill-icons:illustrator"
+        },
+        { "name": "Stitch", "level": 1, "icon": "skill-icons:kotlin-dark" }
       ]
     },
     {
-      "title": "Frontend",
+      "title": "Design & Creativity",
       "skills": [
-        { "name": "Astro", "level": 2, "icon": "skill-icons:astro" },
-        { "name": "HTML", "level": 2, "icon": "skill-icons:html" },
-        { "name": "CSS", "level": 2, "icon": "skill-icons:css" },
-        { "name": "Tailwind CSS", "level": 1, "icon": "skill-icons:tailwindcss-dark" }
+        { "name": "Graphic Design", "level": 2, "icon": "mdi:palette" },
+        { "name": "Branding", "level": 2, "icon": "mdi:trademark" },
+        {
+          "name": "UX/UI Design",
+          "level": 2,
+          "icon": "mdi:pencil-box-outline"
+        },
+        {
+          "name": "Digital Illustration",
+          "level": 1,
+          "icon": "mdi:draw"
+        }
       ]
     },
     {
-      "title": "Backend",
+      "title": "Complementary Tools",
       "skills": [
-        { "name": "FastAPI", "level": 2, "icon": "skill-icons:fastapi" },
-        { "name": "Python", "level": 2, "icon": "skill-icons:python-dark" },
-        { "name": "Firebase", "level": 3, "icon": "vscode-icons:file-type-firebase" }
+        { "name": "Figma", "level": 2, "icon": "skill-icons:figma-dark" },
+        { "name": "CorelDRAW", "level": 2, "icon": "mdi:draw-pen" },
+        {
+          "name": "Canva",
+          "level": 3,
+          "icon": "mdi:layers"
+        }
       ]
     },
     {
-      "title": "Database",
+      "title": "Transversal Skills",
       "skills": [
-        { "name": "SQLite", "level": 3, "icon": "skill-icons:sqlite" },
-        { "name": "PostgreSQL", "level": 2, "icon": "skill-icons:postgresql-dark" }
+        {
+          "name": "Color Theory",
+          "level": 3,
+          "icon": "mdi:palette-swatch"
+        },
+        {
+          "name": "Visual Composition",
+          "level": 2,
+          "icon": "mdi:image-frame"
+        }
       ]
     }
   ]

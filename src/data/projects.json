@@ -1,7 +1,7 @@
 [
   {
-    "title": "Awesome Website",
-    "description": "A high-performance, SEO-optimized web application built with modern frameworks to showcase technical expertise.",
+    "title": "Visual Identity for Local Business",
+    "description": "Complete visual identity design for local business including logo, color palette, social media applications and marketing materials.",
     "images": ["astro-01.webp", "astro-02.jpeg"],
     "tech": ["Astro", "Tailwind"],
     "platforms": ["web"],
@@ -9,8 +9,8 @@
     "category": "Published Website"
   },
   {
-    "title": "Demo Mobile App",
-    "description": "A high-performance mobile application built with modern frameworks to showcase technical expertise.",
+    "title": "Digital Illustration Collection",
+    "description": "Series of custom digital illustrations for social media, character design and commercial artwork with unique and adaptable style.",
     "images": ["astro-02.jpeg", "#"],
     "tech": ["Flutter", "Dart", "REST API"],
     "platforms": ["apple-ios", "android"],
