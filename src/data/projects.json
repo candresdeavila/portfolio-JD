@@ -1,11 +1,16 @@
 [
   {
-    "title": "Visual Identity for Local Business",
-    "description": "Complete visual identity design for local business including logo, color palette, social media applications and marketing materials.",
-    "images": ["astro-01.webp", "astro-02.jpeg"],
-    "tech": ["Astro", "Tailwind"],
+    "title": "Visual App for SENA",
+    "description": "A visual app for SENA (Servicio Nacional de Aprendizaje) that allows users to explore and learn about different educational programs and courses offered by the institution. The app features an interactive interface with multimedia content, including videos and images, to enhance the learning experience.",
+    "images": ["/senapp.mp4"],
+    "mediaSize": {
+      "width": 656,
+      "height": 1280,
+      "displayWidth": 260
+    },
+    "tech": ["Figma", "Stitch"],
     "platforms": ["web"],
-    "link": "https://astro.build/themes/details/career-portfolio-data-driven-astro-ssg/",
+    "link": "https://stitch.withgoogle.com/preview/17636653274534932666?node-id=82ca117910564b948296cb2e3e1b4316",
     "category": "Published Website"
   },
   {

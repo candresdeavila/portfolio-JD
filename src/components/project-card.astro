@@ -1,22 +1,68 @@
 ---
 import { Icon } from 'astro-icon/components';
+
+interface Props {
+  project: {
+    title: string;
+    description: string;
+    images: string[];
+    mediaSize?: {
+      width: number;
+      height: number;
+      displayWidth?: number;
+    };
+    tech: string[];
+    platforms: string[];
+    link: string;
+    category: string;
+  };
+}
+
 const { project } = Astro.props;
 
 const isSlider = project.images.length > 1;
+const isVideo = (src: string) => /\.(mp4|webm|ogg)$/i.test(src);
+const mediaSize = project.mediaSize;
+const naturalMediaSize = mediaSize?.width && mediaSize?.height ? mediaSize : undefined;
+const hasNaturalMediaSize = Boolean(naturalMediaSize);
+const mediaDisplayWidth = naturalMediaSize?.displayWidth ?? naturalMediaSize?.width;
+const mediaFrameStyle = naturalMediaSize
+  ? `aspect-ratio: ${naturalMediaSize.width} / ${naturalMediaSize.height}; max-width: ${mediaDisplayWidth}px; margin-inline: auto;`
+  : undefined;
 ---
 
-<div class="project-card group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-500">
-  <div class="aspect-video overflow-hidden relative bg-[#1a1a1a]">
+<div
+  class="project-card group relative w-full bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-500"
+>
+  <div
+    class={`${hasNaturalMediaSize ? '' : 'aspect-video'} overflow-hidden relative bg-[#1a1a1a]`}
+    style={mediaFrameStyle}
+  >
     <div class="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
     
     <div class={`w-full h-full relative ${isSlider ? 'image-slider' : ''}`}>
-      {project.images.map((img, index) => (
-        <img 
-          src={img}
-          alt={`${project.title} screenshot ${index + 1}`}
-          onerror="this.onerror=null;this.src='placeholder.jpeg';"
-          class={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 ${index === 0 ? 'opacity-100 z-0' : 'opacity-0 z-[-1]'}`}
-        />
+      {project.images.map((media, index) => (
+        isVideo(media) ? (
+          <video
+            src={media}
+            aria-label={`${project.title} video ${index + 1}`}
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            width={naturalMediaSize?.width}
+            height={naturalMediaSize?.height}
+            class={`absolute inset-0 w-full h-full ${hasNaturalMediaSize ? 'object-contain' : 'object-cover group-hover:scale-110'} transition-all duration-1000 ${index === 0 ? 'opacity-100 z-0' : 'opacity-0 z-[-1]'}`}
+          />
+        ) : (
+          <img 
+            src={media}
+            alt={`${project.title} screenshot ${index + 1}`}
+            onerror="this.removeAttribute('onerror');this.setAttribute('src','/placeholder.jpeg');"
+            class={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 ${index === 0 ? 'opacity-100 z-0' : 'opacity-0 z-[-1]'}`}
+          />
+        )
       ))}
     </div>
     
@@ -59,21 +105,21 @@ const isSlider = project.images.length > 1;
     const sliders = document.querySelectorAll('.image-slider');
     
     sliders.forEach(slider => {
-      const images = slider.querySelectorAll('img');
-      if (images.length <= 1) return;
+      const mediaItems = slider.querySelectorAll('img, video');
+      if (mediaItems.length <= 1) return;
 
       let currentIndex = 0;
       setInterval(() => {
         // Hide current
-        images[currentIndex].classList.remove('opacity-100', 'z-0');
-        images[currentIndex].classList.add('opacity-0', 'z-[-1]');
+        mediaItems[currentIndex].classList.remove('opacity-100', 'z-0');
+        mediaItems[currentIndex].classList.add('opacity-0', 'z-[-1]');
         
         // Move to next
-        currentIndex = (currentIndex + 1) % images.length;
+        currentIndex = (currentIndex + 1) % mediaItems.length;
         
         // Show next
-        images[currentIndex].classList.remove('opacity-0', 'z-[-1]');
-        images[currentIndex].classList.add('opacity-100', 'z-0');
+        mediaItems[currentIndex].classList.remove('opacity-0', 'z-[-1]');
+        mediaItems[currentIndex].classList.add('opacity-100', 'z-0');
       }, 3500);
     });
   }
